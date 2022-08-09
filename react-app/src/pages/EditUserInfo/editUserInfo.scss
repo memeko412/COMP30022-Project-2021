@@ -1,0 +1,131 @@
+.edit-user-info-wrapper {
+  padding-bottom: 89px;
+
+  .top {
+    width: 100%;
+    background-color: #f9fbfc;
+    padding: 137px 0 49px 0;
+
+    .avatar {
+      text-align: center;
+
+      .picture {
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .input-wrapper,
+    .input-grouping-wrapper {
+      display: flex;
+      justify-content: center;
+
+      .user-name-input {
+        width: 287px;
+        height: 48px;
+        background: #f1f1f1;
+        border-radius: 10px;
+        margin-top: 24px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #001224;
+        padding-left: 24px;
+      }
+    }
+
+    .grouping-select {
+      width: 287px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 45px;
+      margin-top: 24px;
+
+      .ant-select-selector {
+        background: #f1f1f1;
+        height: 48px;
+        border-radius: 8px;
+      }
+
+      .ant-select-selection-placeholder {
+        padding-top: 6px;
+        padding-left: 12px;
+      }
+
+      .down-arrow-img {
+        position: relative;
+        right: 16px;
+        cursor: pointer;
+        width: 19px;
+        height: 16px;
+      }
+    }
+
+    .ant-select-selection-item {
+      padding-top: 6px;
+      padding-left: 12px;
+    }
+
+    .ant-select-item {
+      font-size: 20px;
+    }
+  }
+
+  .form {
+    margin-top: 50px;
+  }
+
+  .bottom-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+
+    .settings {
+      height: 80px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 10px;
+      text-align: center;
+      width: 291px;
+      bottom: 70px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font-weight: 500;
+      color: #000;
+      background-color: #fff;
+      border: none;
+      box-shadow: 0px 15px 20px rgba(46, 66, 145, 0.2);
+      transition: all 0.3s ease 0s;
+      outline: none;
+    }
+
+    .settings:hover {
+      background-color: white;
+      box-shadow: 0px 15px 20px #a2bdf3;
+    }
+
+    .one-function {
+      width: 50%;
+      position: relative;
+
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          top: -8px;
+          position: absolute;
+          height: 42px;
+          right: 0;
+          opacity: 0.2;
+          border: 1px solid #707070;
+        }
+      }
+
+      .img {
+        cursor: pointer;
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}

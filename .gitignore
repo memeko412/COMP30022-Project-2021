@@ -1,0 +1,10 @@
+
+# path
+.idea
+.gradle
+build
+
+# file
+*.class
+*.classpath
+*.iml

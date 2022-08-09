@@ -1,0 +1,32 @@
+.register-wrap {
+    width: 100%;
+    height: 100vh;
+    .register-form {
+        width: 100%;
+        padding: 50px;
+        .form-sub-title {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-tent {
+            padding-top: 20px;
+            .login-form-forgot {
+                float: right;
+            }
+        }
+    }
+    
+}
+.codeBox{
+    display: flex;
+    align-items: center;
+    .codeButton{
+        // border: 1px solid red;
+        height: 30px;
+        position: relative;
+        top: 3px;
+        margin-left: 20px;
+        background-color: #5170e5;
+        border-color: #5170e5;
+    }
+}

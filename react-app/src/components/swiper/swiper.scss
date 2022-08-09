@@ -1,0 +1,15 @@
+.login-swiper{
+    width: 100%;
+    .swiper-item{
+        width: 100%;
+        height: 100vh;
+        padding: 50px 50px 120px;
+        background: radial-gradient(circle, #3FC8FE 0%, #4594FE 100%);
+        .introduction{
+            text-align: center;
+            font-size: 25px;
+            color: #FFFFFF;
+            padding-top: 20px;
+        }
+    }
+}

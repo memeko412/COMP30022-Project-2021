@@ -1,0 +1,98 @@
+@import '../../../assets/css/mixins.scss';
+
+.add-user-info-wrapper {
+  flex: 1;
+  padding-bottom: 52px;
+  padding-left: 380px;
+
+  .top-container {
+    width: 100%;
+    background-color: #f9fbfc;
+    padding: 51px 0 30px 0;
+
+    .avatar {
+      .picture {
+        border-radius: 80px;
+        background: #f1f1f1;
+        line-height: 180px !important;
+      }
+
+      .add-icon {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+      }
+    }
+
+    .input-wrapper,
+    .input-grouping-wrapper {
+      display: flex;
+      justify-content: center;
+
+      .user-name-input {
+        width: 287px;
+        height: 48px;
+        background: #f1f1f1;
+        border-radius: 10px;
+        margin-top: 24px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #001224;
+        padding-left: 24px;
+      }
+    }
+
+    .grouping-select {
+      width: 287px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 45px;
+      margin-top: 24px;
+
+      .ant-select-selector {
+        background: #f1f1f1;
+        height: 48px;
+        border-radius: 8px;
+      }
+
+      .ant-select-selection-placeholder {
+        padding-top: 6px;
+        padding-left: 12px;
+      }
+
+      .down-arrow-img {
+        position: relative;
+        right: 16px;
+        cursor: pointer;
+        width: 19px;
+        height: 16px;
+      }
+    }
+
+    .ant-select-selection-item {
+      padding-top: 6px;
+      padding-left: 12px;
+    }
+
+    .ant-select-item {
+      font-size: 20px;
+    }
+  }
+
+  .form {
+    margin-top: 50px;
+  }
+
+  .bottom-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+
+    @include settings();
+  }
+
+  .upload-file-input {
+    display: none;
+  }
+}

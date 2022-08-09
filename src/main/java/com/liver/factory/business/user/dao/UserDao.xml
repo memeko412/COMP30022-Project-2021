@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.liver.factory.business.user.dao.UserDao">
+
+    <select id="findUser" resultType="com.liver.factory.business.user.dto.UserDto">
+        SELECT
+            user_id,
+            account_name,
+            user_name,
+            company,
+            `work`,
+            gender,
+            photo,
+            intro,
+            phone,
+            address,
+            email,
+            theme,
+            date_of_birth,
+            password,
+            is_admin,
+            is_valid,
+            created_by,
+            created_time,
+            updated_by,
+            updated_time
+        FROM
+          tm_user
+        WHERE
+          account_name = #{accountName}
+        AND password = #{password}
+        AND is_valid = '0'
+    </select>
+
+    <select id="findUserByUserId" resultType="com.liver.factory.business.user.dto.UserDto">
+        SELECT
+            user_id,
+            account_name,
+            user_name,
+            company,
+            `work`,
+            gender,
+            photo,
+            intro,
+            phone,
+            address,
+            email,
+            theme,
+            date_of_birth,
+            password,
+            is_admin,
+            is_valid,
+            created_by,
+            created_time,
+            updated_by,
+            updated_time
+        FROM
+          tm_user
+        WHERE
+          user_id = #{userId}
+        AND is_valid = '0'
+    </select>
+
+    <update id="updateUserPassword">
+        UPDATE tm_user
+        SET
+          password = #{password}
+        WHERE
+            email = #{email}
+        AND is_valid = '0'
+    </update>
+
+
+    <insert id="addUser" parameterType="com.liver.factory.business.user.dto.UserDto">
+        INSERT INTO tm_user
+        (
+          account_name,
+          user_name,
+          company,
+          `work`,
+          gender,
+          photo,
+          intro,
+          phone,
+          address,
+          email,
+          theme,
+          date_of_birth,
+          password,
+          is_admin,
+          is_valid,
+          created_by,
+          created_time,
+          updated_by,
+          updated_time
+        )
+        VALUES
+        (
+          #{accountName},
+          #{userName},
+          #{company},
+          #{work},
+          #{gender},
+          #{photo},
+          #{intro},
+          #{phone},
+          #{address},
+          #{email},
+          #{theme},
+          #{dateOfBirth},
+          #{password},
+          #{isAdmin},
+          #{isValid},
+          #{createdBy},
+          #{createdTime},
+          #{updatedBy},
+          #{updatedTime}
+        )
+    </insert>
+
+    <update id="updateUser" parameterType="com.liver.factory.business.user.dto.UserDto">
+        UPDATE tm_user
+        SET
+        <if test="user_name != null">
+            user_name = #{userName},
+        </if>
+        <if test="company != null">
+            company = #{company},
+        </if>
+        <if test="work != null">
+            `work` = #{work},
+        </if>
+        <if test="gender != null">
+            gender = #{gender},
+        </if>
+        <if test="photo != null">
+            photo = #{photo},
+        </if>
+        <if test="intro != null">
+            intro = #{intro},
+        </if>
+        <if test="phone != null">
+            phone = #{phone},
+        </if>
+        <if test="address != null">
+            address = #{address},
+        </if>
+
+        <if test="theme != null">
+            theme = #{theme},
+        </if>
+        <if test="date_of_birth != null">
+            date_of_birth = #{date_of_birth},
+        </if>
+        updated_by = #{updatedBy},
+        updated_time = #{updatedTime}
+        WHERE
+          user_id = #{userId}
+    </update>
+</mapper>

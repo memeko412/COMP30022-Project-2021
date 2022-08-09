@@ -1,0 +1,53 @@
+.forget-wrap {
+    width: 100%;
+    height: 100vh;
+    .forget-form {
+        width: 100%;
+        padding: 50px;
+        .logo{
+            width: 35px;
+        }
+        .form-sub-title {
+            display: flex;
+            flex-direction: column;
+            .form-sub-title-text {
+                padding-top: 30px;
+                color: #707070;
+            }
+            
+        }
+        .form-tent {
+            padding-top: 40px;
+            .border-left {
+               
+
+            }
+            .login-btn{
+                .login-form-button{color:"#5170e5"}
+            }
+            .login-form-forgot {
+                float: right;
+            }
+        }
+        .form-other-title{
+            padding-top: 50px;
+            img {
+                width: 25px;
+                margin-right: 12px;
+            }
+        }
+    }
+}
+.codeBox{
+    display: flex;
+    align-items: center;
+    .codeButton{
+        // border: 1px solid red;
+        height: 30px;
+        position: relative;
+        top: 3px;
+        margin-left: 20px;
+        background-color: #5170e5;
+        border-color: #5170e5;
+    }
+}

@@ -1,0 +1,45 @@
+.login-wrap {
+    width: 100%;
+    height: 100vh;
+    .login-form {
+        width: 100%;
+        padding: 50px;
+        .logo{
+
+            position: relative;
+            width: 35px;
+        }
+        .form-sub-title {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-tent {
+            padding-top: 20px;
+            
+            .login-form-forgot {
+                float: right;
+            }
+        }
+        .form-other-title{
+            padding-top:30px;
+        }
+        .icon{
+            .google{
+                width: 40px;
+            }
+        }
+
+       
+    }
+}
+.imgCodeBox{
+    display: flex;
+    align-items: center;
+    .codeImg{
+        // border: 1px solid red;
+        height: 30px;
+        position: relative;
+        top: 3px;
+        margin-left: 10px;
+    }
+}

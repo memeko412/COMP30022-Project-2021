@@ -1,0 +1,126 @@
+.home {
+  .top {
+    width: 100%;
+    background-color: #f9fbfc;
+    padding: 178px 0 14px 0;
+
+    @media (max-width: 1300px) {
+      padding-top: 130px;
+    }
+  }
+
+  .bottom {
+    width: 100%;
+    background-color: white;
+  }
+
+  .avatar {
+    text-align: center;
+  }
+
+  .picture {
+    border-radius: 20px;
+  }
+
+  .user-name {
+    font-size: 42px;
+    font-weight: 500;
+    color: #001224;
+    margin-top: 12px;
+  }
+
+  .details {
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 33px;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    
+
+    &-text {
+      font-size: 20px;
+      font-weight: 400;
+      color: #50525a;
+      margin-left: 23px;
+    }
+
+
+  }
+  .left {
+    margin-bottom: 120px;
+  }
+  .right {
+    margin-left: 158px;
+    text-align: center;
+    margin-bottom: 120px;
+
+    .text {
+      padding-left: 20px;
+      font-size: 24px;
+      font-weight: 400;
+      color: #5c668d;
+      min-height: 37px;
+      
+
+    }
+  }
+
+  .settings {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
+    width: 300px;
+    bottom: -115px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 15px 20px rgba(46, 66, 145, 0.2);
+    transition: all 0.3s ease 0s;
+    outline: none;
+  }
+
+  .settings:hover {
+    background-color: white;
+    box-shadow: 0px 15px 20px #a2bdf3;
+    transform: translate(-50%, -7px);
+  }
+
+  .one-function {
+    width: 150%;
+    position: relative;
+
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        top: -8px;
+        position: absolute;
+        height: 42px;
+        right: 0;
+        opacity: 0.2;
+        border: 1px solid #707070;
+      }
+    }
+
+    .img {
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
